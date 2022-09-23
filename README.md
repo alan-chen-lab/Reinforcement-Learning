@@ -1,2 +1,2 @@
 ## Reinforcement-Learning
-#### course from NTNU
+#### Course from NTNU
