@@ -81,8 +81,8 @@ def eps_function(eps):
             # rvs method provides random samples of distibution
             prob_theta_samples.append(p.rvs(1))
 
-        prob_theta_samples = np.asarray(prob_theta_samples)
-        prob_theta_samples = np.reshape(prob_theta_samples, 4)
+        # prob_theta_samples = np.asarray(prob_theta_samples)
+        # prob_theta_samples = np.reshape(prob_theta_samples, 4)
         # print(prob_theta_samples)
         # ---------------epsilon greedy------------------
         # where epsilon refers to the probability of choosing to explore,
@@ -90,13 +90,13 @@ def eps_function(eps):
         # Select best bandit based on theta sample a bandit
         p = np.random.random()
         # exploring
-        if p < eps:
+        if p < eps:  # (eps = 1 / step) = decay over time
             # get the index of random.choice
             select_bandit = random.choice(
-                list(enumerate(prob_theta_samples)))[0]
+                list(enumerate(p_bandits)))[0]
         # exploits
         else:
-            select_bandit = np.argmax(prob_theta_samples)
+            select_bandit = np.argmax(p_bandits)
         # ---------------end epsilon greedy------------------
         # print(select_bandit)
         # Run bandit and get both win count and run count
@@ -119,7 +119,7 @@ def eps_function(eps):
     return average_reward
 
 
-eps = 0.1
+eps = 0.05
 average_reward = eps_function(eps)
 print('Max reward:', np.max(average_reward))
 plt.tight_layout()  # Adjust the padding between and around subplots.
