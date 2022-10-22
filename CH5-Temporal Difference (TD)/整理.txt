@@ -1,0 +1,14 @@
+lambda=0:
+	TD(lambda)=TD(0)
+
+lambda=1:
+	TD(lambda)趨近於 TD(1)   #有一個gamman n次方項沒消掉
+
+
+alpha=1(learning rate):
+	TD(1)	  =      monte carlo
+
+alpha!=1(learning rate):
+	TD(1)	  趨近於 monte carlo
+
+
