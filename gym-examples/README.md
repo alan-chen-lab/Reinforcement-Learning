@@ -6,9 +6,22 @@
 - `state_mem_size`: NN state memory(1 current, 5 previous)
 - `trace_size`: trace memory
 - `max_steps`: to make it infinite make sure reach objective
+- `epoch_size`: NN model train
+- `gamma`: discount factor
+- `episodes`: round
 
 ### functions introduction
-- Qlearning: DQN policy
+- `Qlearning()`: DQN policy
+- `class NN(nn.Module)`: design NN
+- `class replay_memory`: record memory(s, s_next, action, reward, terminated)
+- `class trace_mem`: if there are no target in th move way, then punish th opposite direction of the action value
+- `class state_mem`: state memory of NN, we consider the previous states so that the agent has memory
+- `def state_to_chanel(state)`: make pre-process to define each channel as 0, 1, and 2 (0 is free space, 1 is obstacle, and 2 is target) for extract 
+- `def epsilon_greedy(model, epsilon, s, see_target)`: epsilon_greedy
+- `def greedy(s, model, see_target)`: choose the max value of action
+- `class MyDataset(Dataset)`: load dataset
+- `def trainer(train_loader, model, epoch_size)`: use SGD and cauculate the loss function
+
 
 # Gym Examples
 Some simple examples of Gym environments and wrappers.
