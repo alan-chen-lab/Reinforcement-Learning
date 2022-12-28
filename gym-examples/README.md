@@ -1,14 +1,14 @@
 # Final Project.py
 ### parameters
--wall_num # obstacles num
--real_size # full map size
--agent_size # agent view
--state_mem_size # NN state memory(1 current, 5 previous)
--trace_size # trace memory
--max_steps # to make it infinite make sure reach objective
+-wall_num: obstacles num
+-real_size: full map size
+-agent_size: agent view
+-state_mem_size: NN state memory(1 current, 5 previous)
+-trace_size: trace memory
+-max_steps: to make it infinite make sure reach objective
 
 ### functions introduction
--Qlearning # DQN policy
+-Qlearning: DQN policy
 
 # Gym Examples
 Some simple examples of Gym environments and wrappers.
