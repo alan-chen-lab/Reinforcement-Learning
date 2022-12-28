@@ -1,6 +1,7 @@
 # grid_world.py
 ### functions introduction
 - `def reset()`: resrt env
-for random target and agent location
+> For random target and agent location
 - `def step(action)`: 
-cauculate next state, define pad_map, 
+> Cauculate next state, define pad_map, and target move each direction randomly
+> Reward function: 
