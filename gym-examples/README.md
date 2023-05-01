@@ -1,4 +1,4 @@
-# Final Project.py
+## [Final Project.py](https://github.com/alan-chen-lab/Reinforcement-Learning/blob/main/gym-examples/final_project.py)
 ### parameters
 - `wall_num`: obstacles num
 - `real_size`: full map size
@@ -22,8 +22,9 @@
 - `class MyDataset(Dataset)`: load dataset
 - `def trainer(train_loader, model, epoch_size)`: use SGD and cauculate the loss function
 
+***
 
-# Gym Examples
+## Gym Examples
 Some simple examples of Gym environments and wrappers.
 For some explanations of these examples, see the [Gym documentation](https://gymnasium.farama.org).
 
